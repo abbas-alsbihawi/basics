@@ -1,3 +1,5 @@
+import model.User
+
 fun main() {
 //    startVar()
 //    rangOption()
@@ -11,15 +13,51 @@ fun main() {
 //    println(toPower(4,3))
 //   println( calculateSum(3,5))
 //    println( calculateSum(3,5,5))
-    createUser(112,"abbas","25" ,"baghdad",)
-    createUser(
-        useId=112,
-        userName="abbas alsbihawi",
-        useAge="25" ,
-        userAddress="baghdad",
-        )
+//    createUser(112,"abbas","25" ,"baghdad",)
+//    createUser(
+//        useId=112,
+//        userName="abbas alsbihawi",
+//        useAge="25" ,
+//        userAddress="baghdad",
+//        )
+//    var myFriends= listOf<String>("abbas","ali","mohammed")
+//    println(getMyFriendsDetails(myFriends,'a'))
+//    println(doOperation(12,43){num1:Int,num2:Int->num1+num2})
+//    println(doOperation{num1:Int,num2:Int->num1+num2})
+//   println(myFunction(89,78))
+//    myFunction(89,78)
+    val myUser=User("abbas","abbas97","079975899","bg")
+    println(myUser.username)
 //    Mans().isMan()
 }
+
+
+//fun getMyFriendsDetails(myFriends:List<String>,firstChar:Char):List<String>{
+//   return myFriends.filter { it[0]==firstChar }
+//}
+fun getMyFriendsDetails(myFriends:List<String>,firstChar:Char)= myFriends.filter { it[0]==firstChar }
+
+// region high order function
+fun doOperation(number1: Int, number2: Int, myFunction: (Int,Int)->Int): Int {
+    return myFunction(number1,number2)
+}
+
+fun doOperation( myFunction: (Int,Int)->Int): Int {
+    return myFunction(885,56)
+}
+//endregion
+
+// region landbas
+//var myFunction={num1:Int,num2:Int->
+//    "abbas and landbas : ${num1 + num2}"
+//}
+//var myFunction:(Int,Int)->String={num1,num2->
+//    "abbas and landbas : ${num1 + num2}"
+//}
+var myFunction:(Int,Int)->Unit={num1,num2->
+    println("abbas and landbas : ${num1 + num2}")
+}
+//endregion
 
 // region  overLoading function calculate
 
