@@ -1,13 +1,39 @@
 fun main() {
-    startVar()
-    rangOption()
-    getResultMark1(490)
-    println(getResultMark2(30))
-    println(getResultMark3(60))
-    println(getResultMark4(50))
-//    numberText.length
+//    startVar()
+//    rangOption()
+//    getResultMark1(490)
+//    println(getResultMark2(30))
+//    println(getResultMark3(60))
+//    println(getResultMark4(50))
+//    arrayOperation()
+//    forLoop()
+//    social()
+//    println(toPower(4,3))
+//   println( calculateSum(3,5))
+//    println( calculateSum(3,5,5))
+    createUser(112,"abbas","25" ,"baghdad",)
+    createUser(
+        useId=112,
+        userName="abbas alsbihawi",
+        useAge="25" ,
+        userAddress="baghdad",
+        )
 //    Mans().isMan()
 }
+
+// region  overLoading function calculate
+
+/**
+ * this function to calculate between two number and summation
+ * @author abbas alsbihawi
+ * @param number1 any number must be integer
+ * @param number2 any number must be integer
+ * @return summation between those number must be integer
+ * @see calculateSum
+ */
+fun calculateSum(number1: Int, number2: Int) =number1+number2
+fun calculateSum(number1: Int, number2: Int,number3: Int) =number1+number2+number3
+//endregion
 
 fun startVar(){
     println("Hello World!")
@@ -93,6 +119,90 @@ fun getResultMark4(mark:Int)= when (mark) {
     else -> "not Found"
 }
 
+
+fun IntProgression.printAll () {
+    this.forEach{
+        println("$it")
+    }
+}
+
+fun arrayOperation(){
+    var mutableArrayData= mutableListOf("abbas","ali","mohamed")
+    mutableArrayData.add(2,"ali")
+    println(mutableArrayData)
+    var immmutableArrayData= listOf("abbas","ali","mohamed")
+//    immmutableArrayData.add(2,"ali") // not working because immutable list
+    println(immmutableArrayData)
+    var arrayData= arrayOf("abbas","ali","mohamed")
+//    arrayData[3] = "ali" // not working because immutable array
+
+    arrayData.map { println(it) }
+}
+
+/**
+ * for (element in data){
+ *      Operation  on element
+ *     }
+ */
+fun forLoop() {
+
+    for( i in 0..20 step 3){
+        println(i)
+    }
+    for( i in 0 until 20 step 3){
+        println(i)
+    }
+var array= arrayOf("abbas","ali","mohammed")
+    for( i in 0 until array.size){
+        println(array[i])
+    }
+    for(element in array){
+        println(element)
+    }
+
+    loop1@for( i in 1..5 ){
+        loop2@ for( j in 1..5 ){
+            if (i==2) break@loop2
+            print("${i*j} \t")
+
+        }
+        println()
+    }
+ var number=2080
+     while (number>2){
+         number/=2
+         println(number)
+    }
+    number=2080
+    do{
+        number/=2
+        println(number)
+    }while (number>2)
+}
+
+var likesCount=0
+fun social(){
+    var likesCount=0
+   SocialCompactFunction().showLikes(likesCount)
+    likesCount=SocialCompactFunction().like(likesCount)
+    SocialCompactFunction().showLikes(likesCount)
+    likesCount=SocialCompactFunction().like(likesCount)
+    SocialCompactFunction().showLikes(likesCount)
+    likesCount=SocialCompactFunction().disLike(likesCount)
+    SocialCompactFunction().showLikes(likesCount)
+    likesCount=SocialCompactFunction().like(likesCount)
+    SocialCompactFunction().showLikes(likesCount)
+    likesCount=SocialCompactFunction().disLike(likesCount)
+    SocialCompactFunction().showLikes(likesCount)
+}
+
+fun toPower(number: Int=1,pow:Int=2): Int {
+    var result=number
+    for (i in 1 until pow){
+        result *= number
+    }
+     return result
+}
 //class Mans :Man{
 //    override fun isMan() {
 //       println("is Man")
@@ -103,8 +213,52 @@ fun getResultMark4(mark:Int)= when (mark) {
 //interface Man{
 //    fun  isMan();
 //}
-fun IntProgression.printAll () {
-    this.forEach{
-        println("$it")
+
+// region Social
+/**
+ * Compact Function
+ * */
+class SocialCompactFunction{
+    fun like(oldLikesCount:Int)= oldLikesCount+1
+    fun disLike(oldLikesCount:Int)= oldLikesCount+1
+    private fun getLikeDetails(likesCount:Int):String="likes : $likesCount"
+    fun showLikes(likesCount:Int)= println(getLikeDetails(likesCount))
+}
+
+class Social{
+    fun like(){
+        likesCount++
+    }
+    fun disLike(){
+        likesCount--
+    }
+    fun getLikeDetails():String{
+        return "likes : $likesCount"
+    }
+
+    fun showLikes(){
+        println(getLikeDetails())
     }
 }
+
+//endregion
+
+//region Create User
+/**
+ * this function to create user and store in database
+ * @param userId int ,require and unieq
+ * @param userName string
+ * @param userAge int age the person must large 18
+ * @param userAdsress string
+ * */
+fun createUser(useId:Int,userName:String,useAge:String ,userAddress:String){
+    // create user and store database
+
+    displayUser(userName)
+
+}
+
+fun displayUser(userName: String) {
+   println(userName)
+}
+//endregion
