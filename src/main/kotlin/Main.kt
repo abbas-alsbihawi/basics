@@ -26,8 +26,11 @@ fun main() {
 //    println(doOperation{num1:Int,num2:Int->num1+num2})
 //   println(myFunction(89,78))
 //    myFunction(89,78)
-    val myUser=User("abbas","abbas97","079975899","bg")
+
+
+    val myUser=User("abbas","abbas97","079975899","baghdad")
     println(myUser.username)
+
 //    Mans().isMan()
 }
 
