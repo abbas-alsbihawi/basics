@@ -1,17 +1,44 @@
 fun main() {
-    println("Hello World!")
-    var numberText :String? ="null"
-    var numberCHar :Char? ='9'
-    println("number :${numberText?.length}")
-
-   var numberRang=10..50
-//    numberRang.printAll()
+    startVar()
+    rangOption()
     getResultMark1(490)
     println(getResultMark2(30))
     println(getResultMark3(60))
     println(getResultMark4(50))
 //    numberText.length
 //    Mans().isMan()
+}
+
+fun startVar(){
+    println("Hello World!")
+    var numberText :String? ="null"
+    var numberCHar :Char? ='9'
+    println("number :${numberText?.length}")
+}
+fun rangOption(){
+    var numberRang=(0..10).step(2)
+     numberRang.printAll()
+    numberRang=(30.downTo(0)).step(2)
+    numberRang.printAll()
+    println("Enter of number : ")
+    var number= readln()!!.toInt()
+    if (number in numberRang){
+        println("in rang")
+    }
+    else{
+        println("out rang")
+    }
+
+   var charRang=('m'.downTo('a'))//.step(2) not working
+//    charRang.printAll() // not working
+    println("Enter of char : ")
+    var char= readln()!!.toCharArray()[0]
+    if (char in charRang){
+        println("in rang")
+    }
+    else{
+        println("out rang")
+    }
 }
 fun getResultMark1(mark:Int){
     if (mark<50&&mark>=0) {
