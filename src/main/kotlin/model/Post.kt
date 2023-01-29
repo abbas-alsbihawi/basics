@@ -18,4 +18,8 @@ open class Post(var user:String, var contact:String) {
         println("have a new comment")
     }
 
+   open fun editPost() {
+        println("edit new Post")
+    }
+
 }

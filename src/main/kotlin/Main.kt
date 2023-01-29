@@ -1,7 +1,4 @@
-import model.Post
-import model.PostVideo
-import model.PostVideoHD
-import model.User
+import model.*
 
 fun main() {
 //    startVar()
@@ -39,14 +36,15 @@ fun main() {
     Setting.changeLanguageToEnglish()
     println(Setting.language)
 
-    var myPost =PostVideoHD("abbas","it")
-    println( myPost.likesCount)
-    myPost.addComment("who")
-    myPost.addComment("what?")
-    myPost.like()
-    myPost.like()
-    println( myPost.commentsCount)
-    myPost.printAll()
+    var myPost =PostImage("abbas","it")
+//    println( myPost.likesCount)
+//    myPost.addComment("who")
+//    myPost.addComment("what?")
+//    myPost.like()
+//    myPost.like()
+//    println( myPost.commentsCount)
+//    myPost.printAll()
+    myPost.editPost()
 
 
 //    Mans().isMan()
