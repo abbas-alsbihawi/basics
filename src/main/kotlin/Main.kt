@@ -38,13 +38,13 @@ fun main() {
     Setting.changeLanguageToEnglish()
     println(Setting.language)
 
-    var myPost =PostVideo()
+    var myPost =PostVideo("abbas","it")
     println( myPost.likesCount)
+    myPost.addComment("who")
+    myPost.addComment("what?")
     myPost.like()
     myPost.like()
-    myPost.like()
-    myPost.like()
-    println( myPost.likesCount)
+    println( myPost.commentsCount)
 
 //    Mans().isMan()
 }

@@ -1,6 +1,6 @@
 package model
 
-class PostImage: Post()  {
+class PostImage(user:String,  contact:String) : Post(user,contact)  {
 
     var imageLink=""
 }
