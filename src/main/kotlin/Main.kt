@@ -31,6 +31,10 @@ fun main() {
     val myUser=User("abbas","abbas97","079975899","baghdad")
     println(myUser.username)
     println(User.counterUser)
+    println(Setting.language)
+    Setting.logout(myUser)
+    Setting.changeLanguageToEnglish()
+    println(Setting.language)
 
 //    Mans().isMan()
 }
