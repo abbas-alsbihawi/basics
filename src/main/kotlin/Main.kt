@@ -46,9 +46,14 @@ fun main() {
     myPost.like()
     myPost.like()
     println( myPost.commentsCount)
-    myPost.videoLink1080
+    myPost.printAll()
+
 
 //    Mans().isMan()
+}
+
+fun Post.printAll() {
+    println("this ${this.like()}")
 }
 
 
