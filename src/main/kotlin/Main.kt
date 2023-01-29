@@ -30,6 +30,7 @@ fun main() {
 
     val myUser=User("abbas","abbas97","079975899","baghdad")
     println(myUser.username)
+    println(User.counterUser)
 
 //    Mans().isMan()
 }
