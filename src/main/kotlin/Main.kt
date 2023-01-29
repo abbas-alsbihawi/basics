@@ -2,6 +2,13 @@ import Interface.EditablePost
 import model.*
 
 fun main() {
+
+
+
+
+
+
+
 //    startVar()
 //    rangOption()
 //    getResultMark1(490)
@@ -29,10 +36,10 @@ fun main() {
 //    myFunction(89,78)
 
 
-    val myUser1=User("abbas","abbas97","079975899","baghdad")
-    val myUser2=User("abbas","abbas97","079975899","baghdad")
-    println(myUser1.toString())
-    println(myUser1.equals(myUser2))
+//    val myUser1=User("abbas","abbas97","079975899","baghdad")
+//    val myUser2=User("abbas","abbas97","079975899","baghdad")
+//    println(myUser1.toString())
+//    println(myUser1.equals(myUser2))
 //    println(myUser.username)
 //    println(User.counterUser)
 //    println(Setting.language)
@@ -40,12 +47,12 @@ fun main() {
 //    Setting.changeLanguageToEnglish()
 //    println(Setting.language)
 //    var myPost =PostImage("abbas","it")
-    var myPost1 =Post("abbas","it")
-    var myPost2 =PostVideo("abbas","it")
-    myPost1.MyClass().foo()
-    val listPost= mutableListOf<BasicPost>()
-    listPost.add(myPost1)
-    listPost.add(myPost2)
+//    var myPost1 =Post("abbas","it")
+//    var myPost2 =PostVideo("abbas","it")
+//    myPost1.MyClass().foo()
+//    val listPost= mutableListOf<BasicPost>()
+//    listPost.add(myPost1)
+//    listPost.add(myPost2)
 //    println( myPost.likesCount)
 //    myPost.addComment("who")
 //    myPost.addComment("what?")
@@ -56,19 +63,19 @@ fun main() {
 //    myPost1.edit()
 //    myPost2.videoLink360="aaa"
 //    myPost1.imageLink="w.abbas.co"
-    printDetailsLinkPost(myPost1)
+//    printDetailsLinkPost(myPost1)
    val myEditablePost= object :EditablePost{
         override fun edit() {
             println("Editable Post23")
         }
 
     }
-    foo(myEditablePost)
-    foo(object :EditablePost{
-        override fun edit() {
-            println("Editable Post1")
-        }
-    })
+//    foo(myEditablePost)
+//    foo(object :EditablePost{
+//        override fun edit() {
+//            println("Editable Post1")
+//        }
+//    })
 
 //    Mans().isMan()
 }
