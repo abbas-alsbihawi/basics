@@ -1,3 +1,5 @@
+import model.Post
+import model.PostVideo
 import model.User
 
 fun main() {
@@ -35,6 +37,14 @@ fun main() {
     Setting.logout(myUser)
     Setting.changeLanguageToEnglish()
     println(Setting.language)
+
+    var myPost =PostVideo()
+    println( myPost.likesCount)
+    myPost.like()
+    myPost.like()
+    myPost.like()
+    myPost.like()
+    println( myPost.likesCount)
 
 //    Mans().isMan()
 }
