@@ -49,11 +49,33 @@ fun main() {
 //    println( myPost.commentsCount)
 //    myPost.printAll()
     myPost1.edit()
-    myPost2.videoLink360="aaa"
-
+//    myPost2.videoLink360="aaa"
+    myPost1.imageLink="w.abbas.co"
+    printDetailsLinkPost(myPost1)
 
 //    Mans().isMan()
 }
+
+//region type casting
+fun printDetailsLinkPost(myPost: BasicPost){
+    when (myPost) {
+        is Post -> {
+            println("not Link")
+        }
+        is PostImage -> {
+            println(myPost.imageLink)
+        }
+
+        is PostVideo -> {
+            println(myPost.videoLink360)
+        }
+
+        is PostVideoHD -> {
+         println(myPost.videoLink1080)
+        }
+    }
+}
+//endregion
 
 fun Post.printAll() {
     println("this ${this.like()}")
