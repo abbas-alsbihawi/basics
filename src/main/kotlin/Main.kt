@@ -76,6 +76,13 @@ fun  foo(myEditablePost: EditablePost){
     myEditablePost.edit()
 }
 
+fun printDetailsPost(status: Status):String{
+   return when (status) {
+        is Failed -> TODO()
+        is Loading -> TODO()
+        is Success -> status.list.toString()
+    }
+}
 //region type casting
 fun printDetailsLinkPost(myPost: BasicPost){
     when (myPost) {
