@@ -40,8 +40,9 @@ fun main() {
 //    Setting.changeLanguageToEnglish()
 //    println(Setting.language)
 //    var myPost =PostImage("abbas","it")
-    var myPost1 =PostImage("abbas","it")
+    var myPost1 =Post("abbas","it")
     var myPost2 =PostVideo("abbas","it")
+    myPost1.MyClass().foo()
     val listPost= mutableListOf<BasicPost>()
     listPost.add(myPost1)
     listPost.add(myPost2)
@@ -54,7 +55,7 @@ fun main() {
 //    myPost.printAll()
 //    myPost1.edit()
 //    myPost2.videoLink360="aaa"
-    myPost1.imageLink="w.abbas.co"
+//    myPost1.imageLink="w.abbas.co"
     printDetailsLinkPost(myPost1)
    val myEditablePost= object :EditablePost{
         override fun edit() {
