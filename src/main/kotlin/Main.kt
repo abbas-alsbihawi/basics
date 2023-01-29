@@ -44,7 +44,7 @@ fun main() {
 //    myPost.like()
 //    println( myPost.commentsCount)
 //    myPost.printAll()
-    myPost.editPost()
+    myPost.edit()
 
 
 //    Mans().isMan()

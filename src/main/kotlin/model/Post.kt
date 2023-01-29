@@ -1,25 +1,7 @@
 package model
 
-open class Post(var user:String, var contact:String) {
-
-    var comments= mutableListOf<String>()
-    var likesCount=0
-        private set
-    var commentsCount=0
-        private set
-        get() = comments.size
-
-    fun like(){
-        likesCount++
-        println("have a new like")
-    }
-    fun addComment(comment:String){
-        comments.add(comment)
-        println("have a new comment")
-    }
-
-   open fun editPost() {
-        println("edit new Post")
-    }
-
+  class Post(  user:String,contact:String) :BasicPost(user,contact) {
+      override fun edit() {
+          println("edit new Post")
+      }
 }

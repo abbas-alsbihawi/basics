@@ -1,10 +1,8 @@
 package model
 
-class PostImage(user:String,  contact:String) : Post(user,contact)  {
-
+class PostImage(user:String,  contact:String)  :BasicPost(user,contact) {
     var imageLink=""
-    override fun editPost() {
-        super.editPost()
+    override fun edit() {
         println("upload new Image")
     }
 }
