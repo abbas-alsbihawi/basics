@@ -18,6 +18,4 @@ abstract class BasicPost(var user:String, var contact:String) {
         println("have a new comment")
     }
 
-    abstract fun edit()
-
 }

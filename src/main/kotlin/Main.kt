@@ -1,3 +1,4 @@
+import Interface.EditablePost
 import model.*
 
 fun main() {
@@ -48,12 +49,28 @@ fun main() {
 //    myPost.like()
 //    println( myPost.commentsCount)
 //    myPost.printAll()
-    myPost1.edit()
+//    myPost1.edit()
 //    myPost2.videoLink360="aaa"
     myPost1.imageLink="w.abbas.co"
     printDetailsLinkPost(myPost1)
+   val myEditablePost= object :EditablePost{
+        override fun edit() {
+            println("Editable Post23")
+        }
+
+    }
+    foo(myEditablePost)
+    foo(object :EditablePost{
+        override fun edit() {
+            println("Editable Post1")
+        }
+    })
 
 //    Mans().isMan()
+}
+fun  foo(myEditablePost: EditablePost){
+    println("Editable Post")
+    myEditablePost.edit()
 }
 
 //region type casting

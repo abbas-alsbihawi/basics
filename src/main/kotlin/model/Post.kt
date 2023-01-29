@@ -1,6 +1,8 @@
 package model
 
-  class Post(  user:String,contact:String) :BasicPost(user,contact) {
+import Interface.EditablePost
+
+class Post(  user:String,contact:String) :BasicPost(user,contact), EditablePost {
       override fun edit() {
           println("edit new Post")
       }
