@@ -5,4 +5,8 @@ class PostImage(user:String,  contact:String)  :BasicPost(user,contact) {
     override fun edit() {
         println("upload new Image")
     }
+
+    fun fromClass(){
+        imageLink="abbas"
+    }
 }

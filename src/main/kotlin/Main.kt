@@ -35,8 +35,12 @@ fun main() {
     Setting.logout(myUser)
     Setting.changeLanguageToEnglish()
     println(Setting.language)
-
-    var myPost =PostImage("abbas","it")
+//    var myPost =PostImage("abbas","it")
+    var myPost1 =PostImage("abbas","it")
+    var myPost2 =PostVideo("abbas","it")
+    val listPost= mutableListOf<BasicPost>()
+    listPost.add(myPost1)
+    listPost.add(myPost2)
 //    println( myPost.likesCount)
 //    myPost.addComment("who")
 //    myPost.addComment("what?")
@@ -44,7 +48,8 @@ fun main() {
 //    myPost.like()
 //    println( myPost.commentsCount)
 //    myPost.printAll()
-    myPost.edit()
+    myPost1.edit()
+    myPost2.videoLink360="aaa"
 
 
 //    Mans().isMan()
